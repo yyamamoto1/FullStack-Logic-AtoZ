@@ -25,7 +25,11 @@
 ### 3. ツール層（実装と自動化）
 - フロントエンド開発（React/Next.js）
 - バックエンド開発（Node.js/Express、Python/FastAPI）
-- AI統合（OpenAI API、プロンプトエンジニアリング）
+- **AI統合（新機能✨）**
+  - GitHub Copilot高度活用テクニック
+  - ChatGPT API統合開発支援
+  - プロンプトエンジニアリング実践
+  - AI駆動コードレビュー・テスト生成
 - 自動化ツール（n8n、GitHub Actions）
 - インフラ構築（Docker、CI/CD）
 
@@ -53,6 +57,7 @@
 │   └── exercises/               # 演習問題
 │
 ├── 03_tools_and_ops/            # 運用・自動化層
+│   ├── ai_integration_guide/    # 🤖AI統合活用ガイド（新機能✨）
 │   ├── automation_workflows/    # 自動化ワークフロー
 │   ├── prompt_library/          # プロンプトテンプレート
 │   ├── security_tools/          # セキュリティツール
@@ -83,8 +88,11 @@
    - `02_implementation/examples/` のサンプルコードで基礎学習
    - HTML/CSS/JavaScriptの復習
 
-4. **演習問題**
-   - `02_implementation/exercises/` で実践演習
+4. **実践演習（新機能✨）**
+   - `02_implementation/exercises/` で22種類の段階的演習
+   - 初級：プロフィールページ、TODOアプリ、AIチャットボット
+   - 中級：ECサイト、ブログプラットフォーム、リアルタイムチャット
+   - 上級：AI開発アシスタント、プロジェクト管理ツール
 
 ### Phase 2: 実践開発（2-3ヶ月）
 
@@ -104,19 +112,23 @@
    - `tests/` でテストコード作成
    - `.github/workflows/` でCI/CD構築
 
-### Phase 3: 統合と自動化（1-2ヶ月）
+### Phase 3: AI統合と自動化（1-2ヶ月）🤖✨
 
-1. **AI統合**
-   - `02_implementation/ai_service/` でAI機能実装
-   - プロンプトエンジニアリング
+1. **AI統合マスター（新機能✨）**
+   - `03_tools_and_ops/ai_integration_guide/` でAI活用法を習得
+   - GitHub Copilot高度プロンプトエンジニアリング
+   - ChatGPT API統合とコードレビュー自動化
+   - AI開発アシスタント（VSCode拡張）構築
 
-2. **自動化**
+2. **自動化ワークフロー**
    - `03_tools_and_ops/automation_workflows/` で業務自動化
-   - n8nワークフロー構築
+   - GitHub Actions CI/CD + AI品質管理統合
+   - プルリクエスト自動分析システム
 
 3. **セキュリティとパフォーマンス**
    - `01_docs_and_specs/f_security_and_compliance/` でセキュリティ設計
    - `03_tools_and_ops/security_tools/` でセキュリティテスト
+   - AI駆動脆弱性検出
 
 ---
 
@@ -161,6 +173,20 @@ cd FullStack-Logic-AtoZ
 ```bash
 cp .env.example .env
 # .envファイルを編集して、必要なAPIキーなどを設定
+# AI統合機能には以下が必要：
+# OPENAI_API_KEY=your_openai_api_key
+# GITHUB_TOKEN=your_github_token (GitHub Actions用)
+```
+
+### 2.5. AI開発環境のセットアップ（新機能✨）
+
+```bash
+# GitHub Copilot拡張機能をインストール
+code --install-extension GitHub.copilot
+code --install-extension GitHub.copilot-chat
+
+# AI統合ガイドの確認
+cat 03_tools_and_ops/ai_integration_guide/README.md
 ```
 
 ### 3. Docker環境の起動
@@ -245,11 +271,19 @@ npm run dev
 - 認証（JWT、OAuth 2.0）
 - API設計（RESTful、GraphQL）
 
-#### AI統合
-- OpenAI API（GPT-4、DALL-E）
-- プロンプトエンジニアリング
-- LangChain
-- ベクトルデータベース（Pinecone、Weaviate）
+#### AI統合（大幅強化✨）
+- **開発支援AI**
+  - GitHub Copilot（高度プロンプト技法）
+  - ChatGPT API（コードレビュー・テスト生成）
+  - VSCode拡張機能開発
+- **AI API統合**
+  - OpenAI API（GPT-4、DALL-E）
+  - プロンプトエンジニアリング実践
+  - ストリーミングレスポンス処理
+- **AI駆動自動化**
+  - GitHub Actions統合
+  - 自動コード品質管理
+  - インテリジェント脆弱性検出
 
 #### 自動化ツール
 - n8n（ノーコード自動化）

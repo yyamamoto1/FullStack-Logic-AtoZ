@@ -166,9 +166,124 @@ yarn test
 - 可能な限り統合テストも記述
 - エッジケースを考慮
 
+## AI統合開発ガイドライン
+
+このプロジェクトではAI支援開発を積極的に活用しています。以下のガイドラインに従ってください。
+
+### GitHub Copilot活用
+
+#### プロンプト設計の原則
+- ファイルの先頭にプロジェクトコンテキストを明記
+- 具体的な要件と制約を含める
+- コーディング規約を明示
+
+```typescript
+/**
+ * PROJECT CONTEXT FOR GITHUB COPILOT
+ * 
+ * Project: FullStack-Logic-AtoZ
+ * Framework: React 18 + TypeScript + Next.js 14
+ * State Management: Zustand
+ * Styling: Tailwind CSS
+ * Testing: Jest + React Testing Library
+ * 
+ * Code Style:
+ * - Functional components with hooks
+ * - Strict TypeScript
+ * - Accessibility first
+ * - Performance optimized
+ */
+```
+
+#### コード品質基準
+- AI生成コードも通常のレビュープロセスを経る
+- 型安全性を確保
+- テスタビリティを考慮
+- セキュリティベストプラクティスに従う
+
+### ChatGPT API統合
+
+#### プロンプトエンジニアリング
+- システムプロンプトで役割を明確化
+- 構造化された出力を要求
+- エラーハンドリングを実装
+
+```typescript
+const systemPrompt = `
+あなたは経験豊富なソフトウェア開発者です。
+TypeScriptとReactを使用して、
+保守性とテスタビリティを重視したコードを生成してください。
+`;
+```
+
+#### セキュリティ要件
+- APIキーの適切な管理
+- 機密情報をAIサービスに送信しない
+- ユーザーデータの暗号化
+- レート制限の実装
+
+### AI支援開発ワークフロー
+
+#### 1. 計画段階
+- 要件分析でAI支援を活用
+- アーキテクチャ設計の提案
+- コードレビュー戦略の策定
+
+#### 2. 実装段階
+- GitHub Copilotでコード生成
+- ChatGPT APIでドキュメント作成
+- 自動テスト生成
+
+#### 3. 品質保証
+- AI駆動コードレビュー
+- 自動化されたセキュリティチェック
+- パフォーマンス最適化提案
+
+### AI関連のプルリクエスト
+
+AI統合機能のプルリクエストには以下を含めてください：
+
+```markdown
+## AI統合内容
+- 使用したAIサービス: [OpenAI GPT-4, GitHub Copilotなど]
+- プロンプト設計の説明
+- 生成コードの検証方法
+
+## セキュリティチェック
+- [ ] APIキーが適切に管理されている
+- [ ] 機密情報の漏洩がない
+- [ ] レート制限が実装されている
+- [ ] エラーハンドリングが適切
+
+## 品質保証
+- [ ] AI生成コードがテストされている
+- [ ] 型安全性が確保されている
+- [ ] パフォーマンスが最適化されている
+```
+
+### AI学習とフィードバック
+
+#### データ収集
+- 開発効率の測定
+- コード品質指標の追跡
+- ユーザーフィードバックの収集
+
+#### 継続改善
+- プロンプトパターンの最適化
+- AI統合ワークフローの改善
+- チーム知見の共有
+
 ## 質問やサポート
 
 質問がある場合は、Issue を作成するか、プロジェクトメンテナーに直接連絡してください。
+
+### AI関連の質問
+
+AI統合に関する質問は、以下のラベルを使用してIssueを作成してください：
+- `ai-integration` - AI統合機能
+- `github-copilot` - GitHub Copilot関連
+- `chatgpt-api` - ChatGPT API関連
+- `prompt-engineering` - プロンプト設計
 
 ## ライセンス
 
